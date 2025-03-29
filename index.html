@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission | No Backend*</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Get In Touch</h2>
+            <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" id="contactForm">
+                <div class="form-group animate-field">
+                    <input type="text" class="form-control" id="name" name="name" required placeholder=" ">
+                    <label for="name">Full Name</label>
+                </div>
+                
+                <div class="form-group animate-field">
+                    <input type="email" class="form-control" id="email" name="email" required placeholder=" ">
+                    <label for="email">Email Address</label>
+                </div>
+                
+                <div class="form-group animate-field">
+                    <input type="tel" class="form-control" id="phone" name="phone" required placeholder=" ">
+                    <label for="phone">Phone Number</label>
+                </div>
+                
+                <div class="form-group animate-field">
+                    <textarea class="form-control" id="message" name="message" required placeholder=" "></textarea>
+                    <label for="message">Message</label>
+                </div>
+                
+                <!-- Hidden fields for FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="New contact form submission">
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit" class="btn">
+                    <span class="loading"></span>
+                    <span class="btn-text">Send Message</span>
+                </button>
+            </form>
+            
+            <div class="success-message">
+                Thank you! Your message has been sent successfully.
+            </div>
+            
+            <div class="error-message">
+                Oops! Something went wrong. Please try again.
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
